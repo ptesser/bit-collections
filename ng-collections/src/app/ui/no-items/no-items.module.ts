@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { NoItemsComponent } from './no-items.component';
 
@@ -9,6 +10,8 @@ import { NoItemsComponent } from './no-items.component';
   exports: [
     NoItemsComponent,
   ],
-  imports: [],
+  imports: [
+    MatIconModule,
+  ],
 })
 export class NoItemsModule {}
