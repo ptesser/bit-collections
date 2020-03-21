@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -8,4 +8,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './no-items.component.html',
 })
 export class NoItemsComponent {
+  @Input() message = 'Nessun elemento';
 }
