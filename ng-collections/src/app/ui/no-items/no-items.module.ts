@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { MatIconModule } from '@angular/material/icon';
 
 import { NoItemsComponent } from './no-items.component';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
