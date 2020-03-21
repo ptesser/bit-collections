@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 import { NoItemsComponent } from './no-items.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { NoItemsComponent } from './no-items.component';
     NoItemsComponent,
   ],
   imports: [
+    CommonModule,
     MatIconModule,
   ],
 })
