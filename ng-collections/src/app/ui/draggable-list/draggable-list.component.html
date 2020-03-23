@@ -1,0 +1,33 @@
+<ng-container *ngIf="items?.length">
+  <div>
+    <ng-content select="[beforeList]"></ng-content>
+    <ng-container [ngTemplateOutlet]="listTemplate?.templateRef || defaultListTemplate"></ng-container>
+    <ng-content select="[afterList]"></ng-content>
+  </div>
+</ng-container>
+
+<ng-template #defaultListTemplate>
+  <mat-list
+    class="draggable-list"
+    cdkDropList
+    [sortingDisabled]="sortingDisabled"
+    (cdkDropListDropped)="dropHandler($event)">
+    <mat-list-item
+      class="draggable-list-item"
+      *ngFor="let item of items; let i = index; trackBy: trackByIndex"
+      [disabled]="sortingDisabled"
+      cdkDrag>
+      <div class="list-item-placeholder" *cdkDragPlaceholder></div>
+      <!-- FIXME: Workaround due to follow issue https://github.com/angular/components/issues/5502 -->
+      <div matLine></div>
+      <div matLine></div>
+      <div matLine></div>
+      <div matLine>
+        <ng-container
+          [ngTemplateOutlet]="itemTemplate?.templateRef"
+          [ngTemplateOutletContext]="{ item: item, index: i }">
+        </ng-container>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</ng-template>
