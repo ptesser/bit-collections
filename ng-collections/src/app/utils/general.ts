@@ -1,3 +1,33 @@
+/**
+ * General encapsultated utils.
+ * This allow to improve typing.
+ *
+ */
+export function parse<T>(value: string): T {
+  return JSON.parse(value);
+}
+
+export function stringify<T>(value: T) {
+  return JSON.stringify(value);
+}
+
+export function clone<T>(o: T): T {
+  return parse(stringify(o));
+}
+
+export function keys<T extends { [key: string]: any }>(x: T): Array<keyof T> {
+  return Object.keys(x);
+}
+
+export function isObject<T>(value: T) {
+  const type = typeof value;
+  return !!value && (type === 'object' || type === 'function');
+}
+
+export function isArray(value: any): value is any[] {
+  return Array.isArray(value);
+}
+
 export function getItemsGroupById<T extends { id?: number }>(items: T[]) {
   return items.reduce((prev, item) => {
     if (!item.id) {
@@ -7,13 +37,6 @@ export function getItemsGroupById<T extends { id?: number }>(items: T[]) {
 
     return prev;
   }, {} as Record<number, T>);
-}
-
-export function toFirstUppercase<T extends string>(value?: T) {
-  if (!value) {
-    return '';
-  }
-  return value.charAt(0).toUpperCase() + value.substring(1);
 }
 
 export function isComplexObjectArray<T>(array: T[] | number[]): array is T[] {
@@ -45,16 +68,12 @@ export async function getBase64SrcFromBlob(blob: Blob) {
   });
 }
 
-export function keys<T>(x: T): Array<keyof T> {
-  return x ? Object.keys(x) as Array<keyof T> : [];
-}
-
-export function clone<T>(o: T): T {
-  return JSON.parse(JSON.stringify(o));
-}
-
-export function parse<T>(value: string): T {
-  return JSON.parse(value);
+/** String manipulation */
+export function toFirstUppercase<T extends string>(value?: T) {
+  if (!value) {
+    return '';
+  }
+  return value.charAt(0).toUpperCase() + value.substring(1);
 }
 
 export function ellipsisString(value: string, length: number) {
