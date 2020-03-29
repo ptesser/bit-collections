@@ -1,4 +1,4 @@
-import equal from 'fast-deep-equal';
+import { equal } from './equal';
 
 /**
  * Declares a property stored in a subject.
