@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  margin: 1rem;
+
+  .swal {
+    div {
+      margin-bottom: 0.5rem;
+
+      button {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

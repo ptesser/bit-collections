@@ -12,3 +12,46 @@
     [size]="64"
     [message]="'No items'"></ui-no-items>
 </section>
+
+<section class="swal">
+  <h2>Swal service</h2>
+  <div>
+    <button
+      type="button"
+      color="danger"
+      mat-raised-button
+      (click)="showErrorHandler()">
+      Show error
+    </button>
+    <button
+      type="button"
+      color="primary"
+      mat-raised-button
+      (click)="showSuccessHandler()">
+      Show success
+    </button>
+    <button
+      type="button"
+      mat-raised-button
+      color="secondary"
+      (click)="showWarningHandler()">
+      Show warning
+    </button>
+  </div>
+  <div>
+    <button
+      type="button"
+      color="danger"
+      mat-raised-button
+      (click)="showToastErrorHandler()">
+      Show toast error
+    </button>
+    <button
+      type="button"
+      color="primary"
+      mat-raised-button
+      (click)="showToastSuccessHandler()">
+      Show toast success
+    </button>
+  </div>
+</section>
