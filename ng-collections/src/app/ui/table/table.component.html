@@ -1,0 +1,43 @@
+<ag-grid-angular
+  *ngIf="configurations?.lib === TableLib.aggrid && table"
+  class="table ag-theme-material"
+  [rowData]="(table?.page$ | async)?.data || []"
+  [defaultColDef]="defaultColDef"
+  [columnDefs]="(columnDefs$ | async) || []"
+  [suppressMovableColumns]="!options?.colMove"
+  [rowSelection]="options?.rowSelection"
+  [suppressRowClickSelection]="true"
+  [context]="context"
+  (sortChanged)="onSortChangeHandler($event)"
+  (gridReady)="grid = $event"
+  (selectionChanged)="onRowsSelectionChangeHandler($event)"
+  (filterChanged)="onFilterChangeHandler($event)">
+</ag-grid-angular>
+
+<!-- Custom templates -->
+<ng-content select="ng-template[appTemplateCellId]"></ng-content>
+
+<!-- Default templates -->
+<ng-template
+  appTemplateCellId="buttons"
+  let-context="context">
+  <div #buttonsCellDiv>
+    <button
+      *ngFor="let value of context.value"
+      mat-button
+      mat-flat-button
+      [color]="value.type || 'primary'"
+      class="cell-button"
+      (click)="value?.click()">
+      {{ value.text }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template
+  appTemplateCellId="image"
+  let-context="context">
+  <div #imageCellDiv>
+    <img [src]>
+  </div>
+</ng-template>
