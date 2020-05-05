@@ -6,6 +6,8 @@
 
 - https://bit.dev/ptesser/ng-ui
 - https://bit.dev/ptesser/ng-utils
+- https://bit.dev/ptesser/ng-swal
+- https://bit.dev/ptesser/ng-table
 
 ## How to use
 
