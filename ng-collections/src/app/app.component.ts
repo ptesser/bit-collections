@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { SwalService } from 'src/app/ui/swal/swal.service';
 
-import { Table, fields, AgGridField, TableService } from 'src/app/ui/table/table.module';
+import { Table, fields, AgGridField, TableService } from 'src/app/ui/ngx-adapter-table/ngx-adapter-table.module';
 
 interface User {
   id: string;
