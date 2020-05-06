@@ -48,7 +48,7 @@ const SERVICES = [
     MatButtonModule,
     MatIconModule,
     // External Grid Libs
-    AgGridModule.withComponents([TemplateComponent]),
+    AgGridModule.forRoot([TemplateComponent]),
   ],
 })
 export class NgxTableAdapterModule {
