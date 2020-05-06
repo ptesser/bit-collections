@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { NoItemsModule } from './ui/no-items/no-items.module';
 import { SwalModule } from './ui/swal/swal.module';
-import { NgxAdapterTableModule, TableLib } from './ui/ngx-adapter-table/ngx-adapter-table.module';
+import { NgxTableAdapterModule, TableLib } from './ui/ngx-table-adapter/ngx-table-adapter.module';
 
 import { AppComponent } from './app.component';
 
@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
     // Bit
     NoItemsModule,
     SwalModule,
-    NgxAdapterTableModule.forRoot({ lib: TableLib.aggrid }),
+    NgxTableAdapterModule.forRoot({ lib: TableLib.aggrid }),
   ],
   providers: [],
   bootstrap: [AppComponent]

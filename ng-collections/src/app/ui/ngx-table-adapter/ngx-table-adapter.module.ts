@@ -51,12 +51,12 @@ const SERVICES = [
     AgGridModule.withComponents([TemplateComponent]),
   ],
 })
-export class NgxAdapterTableModule {
+export class NgxTableAdapterModule {
 
   // tslint:disable-next-line:variable-name
-  static forRoot(configuration: TableConfigurations): ModuleWithProviders<NgxAdapterTableModule> {
+  static forRoot(configuration: TableConfigurations): ModuleWithProviders<NgxTableAdapterModule> {
     return {
-      ngModule: NgxAdapterTableModule,
+      ngModule: NgxTableAdapterModule,
       providers: [
         ...SERVICES,
         { provide: TABLE_CONFIGURATIONS, useValue: configuration },

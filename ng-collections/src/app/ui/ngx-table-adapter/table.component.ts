@@ -32,7 +32,7 @@ const INIT_TABLE_OPTIONS: TableOptions = {
 @Component({
   encapsulation: ViewEncapsulation.None,
   // tslint:disable-next-line:component-selector
-  selector: 'ngx-adapter-table',
+  selector: 'ngx-table-adapter',
   styleUrls: ['./table.component.scss'],
   templateUrl: './table.component.html',
 })
