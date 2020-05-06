@@ -20,10 +20,15 @@
 
 - `bit add <component-name>` for example: `bit add src/app/ui/no-items` and set entry module with `--main=src/app/ui/no-items/no-items.module.ts`. 
 If you want to group a set of files in an unique namespace you have to specify the id `--id=no-items`
-- `bit tag <component-name>` for example: `bit tag no-items`: improve a component version;
-- `bit export <user-name>.<collection-name> <user-name>.<collection-name>/<component-name>` for example `bit export ptesser.ng-ui ptesser.ng-ui/no-items`: load component into a specific collection;
+- `bit tag <component-name>` for example: `bit tag no-items`: improve a component version (and trigger a build for this component);
+- `bit export <user-name>.<collection-name> <user-name>.<collection-name>/<component-name>` for example `bit export ptesser.ng-ui ptesser.ng-ui/no-items`: load component into a specific collection if the component is already tracked else **TODO**;
 - `bit build <component-name>`: build all components or a specific component;
 - `bit show <component-name>`: show all component dependencies and a general overview;
+
+Remove components
+
+- `bit remove <component-id>`
+- `bit untrack <component-id>`
 
 ### Useful links
 
