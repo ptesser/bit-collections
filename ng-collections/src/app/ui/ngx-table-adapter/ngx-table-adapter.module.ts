@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, ANALYZE_FOR_ENTRY_COMPONENTS } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { TemplateComponent } from './components/template.component';
-import { TableService } from './services/table.service';
 import { TableComponent } from './table.component';
 import { TemplateCellIdDirective } from './template-cell.directive';
 import { TABLE_CONFIGURATIONS, TableConfigurations } from './tokens';
@@ -29,10 +28,6 @@ const DIRECTIVES = [
   TemplateCellIdDirective,
 ];
 
-const SERVICES = [
-  TableService,
-];
-
 @NgModule({
   declarations: [
     ...COMPONENTS,
@@ -48,7 +43,26 @@ const SERVICES = [
     MatButtonModule,
     MatIconModule,
     // External Grid Libs
-    AgGridModule.forRoot([TemplateComponent]),
+    /**
+     * Angular repo for ag-grid: @link https://github.com/ag-grid/ag-grid/tree/master/community-modules/angular/projects/ag-grid-angular
+     */
+    AgGridModule,
+    /**
+     * This is done to avoid error: `Function calls are not supported in decorators but 'AgGridModule' was called.`.
+     *
+     * @link https://github.com/ng-packagr/ng-packagr/issues/727#issuecomment-403383661
+     * Docs use `AgGridModule.withComponents([])` function.
+     */
+    {
+      ngModule: AgGridModule,
+      providers: [
+        {
+          provide: ANALYZE_FOR_ENTRY_COMPONENTS,
+          useValue: [TemplateComponent],
+          multi: true,
+        }
+      ],
+    }
   ],
 })
 export class NgxTableAdapterModule {
@@ -58,7 +72,6 @@ export class NgxTableAdapterModule {
     return {
       ngModule: NgxTableAdapterModule,
       providers: [
-        ...SERVICES,
         { provide: TABLE_CONFIGURATIONS, useValue: configuration },
       ],
     };
