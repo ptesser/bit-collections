@@ -4,7 +4,9 @@ import { PagerFn } from '../definitions/external-definitions';
 import { TableField } from '../table-field';
 import { makeGenericField, makeTable, makeTableField } from '../utils';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class TableService<T, V = any> {
 
   makeTable(pager: PagerFn<T>, fields: TableField<T, V>[]) {
