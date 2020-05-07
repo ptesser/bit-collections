@@ -1,0 +1,60 @@
+:host {
+  --color-drop-area: lightgray;
+  --color-drop-area-active: #5d7a1e;
+  --style-border-drop-area: dashed;
+}
+
+.drop-area {
+  border: 2px var(--style-border-drop-area) var(--color-drop-area);
+  width: 100%;
+  height: 300px;
+
+  &-active {
+    border: 2px var(--style-border-drop-area) var(--color-drop-area-active);
+    color: var(--color-drop-area-active);
+
+    .file-upload-button {
+      label.file-input-container {
+        color: var(--color-drop-area-active);
+
+        .file-label {
+          color: var(--color-drop-area-active);
+        }
+      }
+    }
+  }
+}
+
+.file-upload-button {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+
+  label.file-input-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    color: var(--color-drop-area);
+
+    .file-label {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        font-size: 48px;
+      }
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      display: none;
+    }
+  }
+}

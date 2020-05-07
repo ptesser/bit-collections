@@ -1,0 +1,26 @@
+<div
+  class="drop-area"
+  [class.drop-area-active]="isDropping"
+  (drop)="dropHandler($event)"
+  (dragover)="dragOverHandler($event)"
+  (dragleave)="dragLeaveHandler($event)">
+  <div class="file-upload-button">
+    <label
+      for="file-input"
+      class="file-input-container">
+      <div class="file-label">
+        <mat-icon class="icon">cloud_upload</mat-icon>
+        <span>{{ label }}</span>
+      </div>
+
+      <input
+        id="file-input"
+        class="hide-file"
+        type="file"
+        multiple
+        [accept]="'image/*, application/pdf'"
+        [placeholder]="label"
+        (change)="onFileChange($event)">
+    </label>
+  </div>
+</div>

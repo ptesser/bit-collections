@@ -99,5 +99,126 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "ptesser.ngx-file/ngx-file@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/app/ui/ngx-file/file.ts",
+                "test": false,
+                "name": "file.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-file/index.ts",
+                "test": false,
+                "name": "index.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-file/ngx-file-input-area/ngx-file-input-area.component.html",
+                "test": false,
+                "name": "ngx-file-input-area.component.html"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-file/ngx-file-input-area/ngx-file-input-area.component.scss",
+                "test": false,
+                "name": "ngx-file-input-area.component.scss"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-file/ngx-file-input-area/ngx-file-input-area.component.ts",
+                "test": false,
+                "name": "ngx-file-input-area.component.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-file/ngx-file.module.ts",
+                "test": false,
+                "name": "ngx-file.module.ts"
+            }
+        ],
+        "mainFile": "src/app/ui/ngx-file/index.ts",
+        "trackDir": "src/app/ui/ngx-file",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "ptesser.ngx-table-adapter/ngx-table-adapter@0.0.1": {
+        "files": [
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/adapter/ag-grid-table.ts",
+                "test": false,
+                "name": "ag-grid-table.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/components/template.component.ts",
+                "test": false,
+                "name": "template.component.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/definitions/external-definitions.ts",
+                "test": false,
+                "name": "external-definitions.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/definitions/internal-definitions.ts",
+                "test": false,
+                "name": "internal-definitions.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/ngx-table-adapter.module.ts",
+                "test": false,
+                "name": "ngx-table-adapter.module.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/services/table.service.ts",
+                "test": false,
+                "name": "table.service.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table-field.ts",
+                "test": false,
+                "name": "table-field.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table.component.html",
+                "test": false,
+                "name": "table.component.html"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table.component.scss",
+                "test": false,
+                "name": "table.component.scss"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table.component.spec.ts",
+                "test": false,
+                "name": "table.component.spec.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table.component.ts",
+                "test": false,
+                "name": "table.component.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/table.ts",
+                "test": false,
+                "name": "table.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/template-cell.directive.ts",
+                "test": false,
+                "name": "template-cell.directive.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/tokens.ts",
+                "test": false,
+                "name": "tokens.ts"
+            },
+            {
+                "relativePath": "src/app/ui/ngx-table-adapter/utils.ts",
+                "test": false,
+                "name": "utils.ts"
+            }
+        ],
+        "mainFile": "src/app/ui/ngx-table-adapter/ngx-table-adapter.module.ts",
+        "trackDir": "src/app/ui/ngx-table-adapter",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "version": "14.7.6"
 }
