@@ -137,7 +137,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "ptesser.ngx-table-adapter/ngx-table-adapter@0.0.1": {
+    "ptesser.ngx-table-adapter/ngx-table-adapter@0.0.3": {
         "files": [
             {
                 "relativePath": "src/app/ui/ngx-table-adapter/adapter/ag-grid-table.ts",
