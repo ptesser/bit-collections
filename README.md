@@ -7,7 +7,9 @@
 - https://bit.dev/ptesser/ng-ui
 - https://bit.dev/ptesser/ng-utils
 - https://bit.dev/ptesser/ng-swal
-- https://bit.dev/ptesser/ngx-adapter-table
+- https://bit.dev/ptesser/ngx-table-adapter
+- https://bit.dev/ptesser/ngx-file
+
 
 ## How to use
 
