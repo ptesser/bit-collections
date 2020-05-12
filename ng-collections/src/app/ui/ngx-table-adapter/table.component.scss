@@ -1,6 +1,5 @@
-// TODO: Avoid relative path
-@import "../../../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
-@import "../../../../node_modules/ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin.scss";
+@import "ag-grid-community/src/styles/ag-grid.scss";
+@import "ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin.scss";
 
 .ag-theme-material {
   @include ag-theme-material();
